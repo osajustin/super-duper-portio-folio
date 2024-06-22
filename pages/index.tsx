@@ -1,11 +1,10 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import { Hero } from '@/components/Hero/Hero';
+import { Container } from '@mantine/core';
 
 export default function HomePage() {
   return (
-    <>
-      <Welcome />
-      <ColorSchemeToggle />
-    </>
+    <Container>
+      <Hero />
+    </Container>
   );
 }
