@@ -1,38 +1,47 @@
-# Mantine Next.js template
+# 💼 Justin Osagie - Portfolio
 
-This is a template for [Next.js](https://nextjs.org/) pages router + [Mantine](https://mantine.dev/).
-If you want to use app router instead, see [next-app-template](https://github.com/mantinedev/next-app-template).
+<!--![Welcome Image](https://via.placeholder.com/800x200.png?text=Welcome+to+My+Portfolio)-->
 
-## Features
+Hello! I'm Justin Osagie, a passionate software engineer with a strong background in fullstack development. Welcome to my portfolio where you can explore my projects, skills, and learn a bit more about me.
 
-This template comes with the following features:
+## 🧑‍💻 About Me
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Jest](https://jestjs.io/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+- 👨‍💻 Fullstack Software Developer
+- 🌟 Technology Consultant for SMBs
+- 🏋️‍♂️ Weightlifting and Running Enthusiast
+- 📚 Book Worm
+- 📈 Personal Finance Lover
 
-## npm scripts
+## 🌟 Skills
 
-### Build and dev scripts
+### Programming Languages
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)
+![C#](https://img.shields.io/badge/-C%23-239120?logo=c-sharp&logoColor=fff&style=for-the-badge)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=333&style=for-the-badge)
+![SQL](https://img.shields.io/badge/-SQL-4479A1?logo=sql&logoColor=fff&style=for-the-badge)
+![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=fff&style=for-the-badge)
+![CSS](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=fff&style=for-the-badge)
 
-- `dev` – start dev server
-- `build` – bundle application for production
-- `export` – exports static website to `out` folder
-- `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+### Frameworks
+![Angular](https://img.shields.io/badge/-Angular-DD0031?logo=angular&logoColor=fff&style=for-the-badge)
+![.NET](https://img.shields.io/badge/-.NET-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge)
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=333&style=for-the-badge)
 
-### Testing scripts
+### Databases
+![Microsoft SQL Server](https://img.shields.io/badge/-Microsoft%20SQL%20Server-CC2927?logo=microsoft-sql-server&logoColor=fff&style=for-the-badge)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=fff&style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb&logoColor=fff&style=for-the-badge)
 
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `jest` – runs jest tests
-- `jest:watch` – starts jest watch
-- `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
+### Tools & Technologies
+![JIRA](https://img.shields.io/badge/-JIRA-0052CC?logo=jira&logoColor=fff&style=for-the-badge)
+![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=fff&style=for-the-badge)
+![Visual Studio](https://img.shields.io/badge/-Visual%20Studio-5C2D91?logo=visual-studio&logoColor=fff&style=for-the-badge)
+![Microservices](https://img.shields.io/badge/-Microservices-0078D7?logo=microservices&logoColor=fff&style=for-the-badge)
 
-### Other scripts
+## 📫 Reach Out
+- 🌐 [LinkedIn](https://www.linkedin.com/in/justinosagie/)
+- 💼 [GitHub](https://github.com/osajustin)
+- 🎥 [YouTube](https://youtube.com/@Josantech)
 
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier
+<!--![Footer Image](https://via.placeholder.com/800x100.png?text=Thank+You+for+Visiting)-->
