@@ -1,3 +1,4 @@
+import { Experience } from '@/components/Experience/Experience';
 import { Hero } from '@/components/Hero/Hero';
 import { Navbar } from '@/components/Navbar/navbar';
 import { Container } from '@mantine/core';
@@ -7,6 +8,7 @@ export default function HomePage() {
     <Container>
       <Navbar />
       <Hero />
+      <Experience />
     </Container>
   );
 }
