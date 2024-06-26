@@ -23,8 +23,8 @@ export function Experience() {
 
   return (
     <Container size="md">
-      {/* Title */}
-      <Text className={classes.title}>EXPERIENCE</Text>
+      {/* Section Title */}
+      <Text className={classes.sectionTitle}>EXPERIENCE</Text>
 
       {/* Button group of companies */}
       <Group justify="center" gap="lg" grow>

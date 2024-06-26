@@ -37,7 +37,7 @@
   margin-bottom: 5px;
 }
 
-.title {
+.sectionTitle {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-family:
     Greycliff CF,
