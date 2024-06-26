@@ -27,7 +27,7 @@ export function Experience() {
       <Text className={classes.sectionTitle}>EXPERIENCE</Text>
 
       {/* Button group of companies */}
-      <Group justify="center" gap="lg" grow>
+      <Group justify="space-between" gap="xl" grow>
         {uniqueCompanies.map((company, index) => (
           <UnstyledButton
             className={classes.button}
