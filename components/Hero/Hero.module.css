@@ -57,26 +57,39 @@
   .button {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: rem(24px);
+    font-size: rem(18px);
     line-height: rem(24px);
-    margin-top: rem(48px);
+    color: #1F1E1E;
     background-color: transparent;
     padding: 0.5rem 1rem;
-    padding-left: 0;
+    padding-left: 0.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: rem(4px);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
   }
-
-.button:hover {
-  background-color: #b8b8b8;
-  color: black;
-  border-radius: 0.25rem;
-  /* border-color: #000; */
-}
-
-.button:active {
-  background-color: #000;
-  color: #fff;
-  border-color: #fff;
-}
+  
+  .button:hover, .button:focus {
+    background-color: #1F1E1E;
+    color: #FFFFFF;
+  }
+  
+  .button:hover svg path, .button:focus svg path {
+    fill: #FFFFFF;
+  }
+  
+  .button:active {
+    background-color: #1F1E1E;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
+  
+  .button:active svg path {
+    fill: #FFFFFF;
+  }
   
   .highlight {
     position: relative;
