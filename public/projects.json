@@ -12,7 +12,7 @@
     "tags": ["Vue", "Nuxt", "Netlify"]
   },
   {
-    "title": "Blockchain Explorer; Hive Attention Tokens",
+    "title": "Blockchain Explorer",
     "description": "Sidechain explorer open source project (block explorer) for transactions.",
     "image": "./temporaryProjectImages/image3.png",
     "tags": ["React", "TailwindCSS", "Context API"]
