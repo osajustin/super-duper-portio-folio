@@ -1,0 +1,10 @@
+/* components/Footer.module.css */
+.footer {
+    padding: 20px 0;
+    border-top: 1px solid #333;
+  }
+  
+  .contactTitle {
+    margin-bottom: 10px;
+  }
+  
