@@ -43,9 +43,9 @@
   .text { 
     color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
     font-family: 'Inter', sans-serif;
-    font-weight: 300; /* Light weight */
-    font-size: 1.125rem; /* 18px in rem */
-    line-height: 1.6; /* Optional: Adjust line height for better readability */
+    font-weight: 300;
+    font-size: rem(18px);
+    line-height: rem(24px);
   }
   
   .control {
@@ -54,14 +54,29 @@
     }
   }
   
-  .image {
-    width: rem(376px);
-    height: rem(356px);
-  
-    @media (max-width: $mantine-breakpoint-md) {
-      display: none;
-    }
+  .button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: rem(24px);
+    line-height: rem(24px);
+    margin-top: rem(48px);
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    padding-left: 0;
   }
+
+.button:hover {
+  background-color: #b8b8b8;
+  color: black;
+  border-radius: 0.25rem;
+  /* border-color: #000; */
+}
+
+.button:active {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
   
   .highlight {
     position: relative;
@@ -71,8 +86,10 @@
   }
 
   .specialName {
-    font-size: 96px;
-    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: rem(96px);
+    font-weight: 700;
+    line-height: auto;
     background: linear-gradient(89.81deg, #9845E8 -1.72%, #33D2FF 54.05%, #DD5789 99.78%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
