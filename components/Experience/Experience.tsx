@@ -1,4 +1,4 @@
-import { Container, Title, Button, Group, Text, List, Divider } from '@mantine/core';
+import { Container, Title, Button, Group, Text, List, Divider, UnstyledButton, Stack } from '@mantine/core';
 import classes from './Experience.module.css';
 import workHistory from './../../public/workHistory.json'
 import { useState } from 'react';
@@ -23,33 +23,44 @@ export function Experience() {
 
   return (
     <Container size="md">
+      {/* Title */}
+      <Text className={classes.title}>EXPERIENCE</Text>
+
+      {/* Button group of companies */}
       <Group justify="center" gap="lg" grow>
         {uniqueCompanies.map((company, index) => (
-          <Button
+          <UnstyledButton
+            className={classes.button}
             key={index}
-            variant="transparent"
-            color="rgba(0, 0, 0, 1)"
+
             onClick={() => handleButtonClick(company)}
           >
             {company}
-          </Button>
+          </UnstyledButton>
         ))}
       </Group>
 
-      <Container>
+      {/* Experiences of jobs */}
+      <Container className={classes.experience}>
         {filteredWorkHistory.map((job, index) => (
-          <Group key={index} style={{ marginBottom: '20px' }}>
-            <Title order={3}>{job.role}</Title>
-            <Text size="lg">{job.company}</Text>
-            <Text size="sm">{job.date}</Text>
-            <List withPadding>
+          <Stack key={index}>
+            <Group justify='space-between'>
+              <Title className={classes.role}>{job.role}</Title>
+              <Text className={classes.date}>{job.date}</Text>
+            </Group>
+            <Text className={classes.company}>{job.company}</Text>
+            <List className={classes.list}>
               {job.points.map((point, idx) => (
-                <List.Item key={idx}>{point}</List.Item>
+                <List.Item key={idx} className={classes.listItem}>
+                  <span className={classes.icon}>-</span>
+                  <span>{point}</span>
+                </List.Item>
               ))}
             </List>
-          </Group>
+          </Stack>
         ))}
       </Container>
+
       <Divider style={{ marginTop: '4rem' }} />
     </Container>
   );
