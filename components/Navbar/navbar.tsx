@@ -8,7 +8,7 @@ const links = [
   { link: '#projects', label: 'Projects' },
   { link: '#experience', label: 'Resume' },
   { link: '#contact', label: 'Contact' },
-  { link: '/', label: <IconSunFilled /> },
+  // { link: '/', label: <IconSunFilled /> },
 ];
 
 export function Navbar() {
