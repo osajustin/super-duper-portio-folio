@@ -28,7 +28,8 @@ export function Hero() {
             onClick={(event) => {
               event.preventDefault();
               setModalOpened(true);
-            }}>
+            }}
+            pl={0}>
             <Group>
               Say hi
               <svg width="34" height="6" viewBox="0 0 34 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +48,7 @@ export function Hero() {
           <TextInput label="Subject" placeholder="Subject" required />
           <Textarea label="Message" placeholder="Your message" required />
           <Group mt="md">
-            <Button type="submit">Send</Button>
+            <Button className={classes.button}>Send</Button>
           </Group>
         </form>
       </Modal>
