@@ -3,10 +3,6 @@
   margin-bottom: rem(60px);
 }
   
-.projectTitle {
-  
-}
-
 .sectionTitle {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-family:

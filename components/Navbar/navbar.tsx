@@ -5,9 +5,9 @@ import { IconSunFilled } from '@tabler/icons-react';
 import classes from './Navbar.module.css';
 
 const links = [
-  { link: '/projects', label: 'Projects' },
-  { link: '/resume', label: 'Resume' },
-  { link: '/Contact', label: 'Contact' },
+  { link: '#projects', label: 'Projects' },
+  { link: '#experience', label: 'Resume' },
+  { link: '#contact', label: 'Contact' },
   { link: '/', label: <IconSunFilled /> },
 ];
 
@@ -15,6 +15,23 @@ export function Navbar() {
   const [opened, { toggle }] = useDisclosure(false);
   const [modalOpened, setModalOpened] = useState(false);
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+
+  const handleScroll = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, link: string, offset = 0) => {
+    event.preventDefault();
+    const target = document.querySelector(link);
+    if (target) {
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset + offset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const scrollToTop = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const items = links.map((link) => {
     if (link.label === 'Contact') {
@@ -30,7 +47,8 @@ export function Navbar() {
           {link.label}
         </UnstyledButton>
       );
-    } else if (link.label === <IconSunFilled />) {
+    }
+    else if (link.label === <IconSunFilled />) {
       return (
         <a
           key="iconSunFilled"
@@ -50,7 +68,13 @@ export function Navbar() {
           key={link.label as Key}
           href={link.link}
           className={classes.button}
-          onClick={(event) => event.preventDefault()}
+          onClick={(event) => {
+            if (link.link === '#experience') {
+              handleScroll(event, link.link, -100); // Adjust offset as needed
+            } else {
+              handleScroll(event, link.link, -100);
+            }
+          }}
         >
           {link.label}
         </a>
@@ -64,7 +88,7 @@ export function Navbar() {
         <div className={classes.inner}>
           <Group>
             <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-            <Text className={classes.joLogo}>JO.</Text>
+            <a href="#" className={classes.joLogo} onClick={scrollToTop}>JO.</a>
           </Group>
 
           <Group>
@@ -75,7 +99,17 @@ export function Navbar() {
         </div>
       </header>
 
-      <Modal opened={modalOpened} onClose={() => setModalOpened(false)} title="Contact Us">
+      <Modal
+        opened={modalOpened}
+        onClose={() => setModalOpened(false)}
+        title="Contact Us"
+        overlayProps={{
+          className: classes.modalOverlay, // Apply custom overlay class
+        }}
+        classNames={{
+          content: classes.modalContent, // Apply custom modal content class
+        }}
+      >
         <form>
           <TextInput label="Email" placeholder="Your email" required />
           <TextInput label="Subject" placeholder="Subject" required />

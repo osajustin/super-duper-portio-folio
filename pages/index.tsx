@@ -10,8 +10,12 @@ export default function HomePage() {
     <Container>
       <Navbar />
       <Hero />
-      <Experience />
-      <FeaturedProjects />
+      <section id="experience">
+        <Experience />
+      </section>
+      <section id="projects">
+        <FeaturedProjects />
+      </section>
       <Footer />
     </Container>
   );
