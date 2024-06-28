@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Autocomplete, Group, Burger, Modal, TextInput, Textarea, Button, useMantineColorScheme } from '@mantine/core';
+import React, { Key, useState } from 'react';
+import { Text, Group, Burger, Modal, TextInput, Textarea, Button, useMantineColorScheme, UnstyledButton } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSunFilled } from '@tabler/icons-react';
 import classes from './Navbar.module.css';
@@ -8,7 +8,7 @@ const links = [
   { link: '/projects', label: 'Projects' },
   { link: '/resume', label: 'Resume' },
   { link: '/Contact', label: 'Contact' },
-  { link: '/', label: <IconSunFilled />  },
+  { link: '/', label: <IconSunFilled /> },
 ];
 
 export function Navbar() {
@@ -19,25 +19,23 @@ export function Navbar() {
   const items = links.map((link) => {
     if (link.label === 'Contact') {
       return (
-        <button
+        <UnstyledButton
           key={link.label}
-          className={classes.link}
+          className={classes.button}
           onClick={(event) => {
             event.preventDefault();
             setModalOpened(true);
           }}
-          style={{ background: 'none', border: 'none', padding: 0, font: 'inherit', color: 'inherit', cursor: 'pointer' }}
         >
           {link.label}
-        </button>
+        </UnstyledButton>
       );
-    }
-    if (link.label === <IconSunFilled />) {
+    } else if (link.label === <IconSunFilled />) {
       return (
         <a
           key="iconSunFilled"
           href="#"
-          className={classes.link}
+          className={classes.button}
           onClick={(event) => {
             event.preventDefault();
             toggleColorScheme();
@@ -46,17 +44,18 @@ export function Navbar() {
           <IconSunFilled />
         </a>
       );
+    } else {
+      return (
+        <a
+          key={link.label as Key}
+          href={link.link}
+          className={classes.button}
+          onClick={(event) => event.preventDefault()}
+        >
+          {link.label}
+        </a>
+      );
     }
-    return (
-      <a
-        key={link.label}
-        href={link.link}
-        className={classes.link}
-        onClick={(event) => event.preventDefault()}
-      >
-        {link.label}
-      </a>
-    );
   });
 
   return (
@@ -65,7 +64,7 @@ export function Navbar() {
         <div className={classes.inner}>
           <Group>
             <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-            <p>JO.</p>
+            <Text className={classes.joLogo}>JO.</Text>
           </Group>
 
           <Group>
@@ -81,8 +80,8 @@ export function Navbar() {
           <TextInput label="Email" placeholder="Your email" required />
           <TextInput label="Subject" placeholder="Subject" required />
           <Textarea label="Message" placeholder="Your message" required />
-          <Group position="right" mt="md">
-            <Button type="submit">Send</Button>
+          <Group mt="md">
+            <Button className={classes.button}>Send</Button>
           </Group>
         </form>
       </Modal>
