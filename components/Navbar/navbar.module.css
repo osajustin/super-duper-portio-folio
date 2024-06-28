@@ -1,13 +1,10 @@
 .header {
   position: sticky;
   top: 0;
-  /* z-index: 1000; Ensure it appears above other elements */
-  background-color: #fff; /* Ensure it has a background color to cover content behind */
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Optional: Add a shadow for better visibility */
-  padding: 10px 20px; /* Add padding as needed */
+  background-color: #FFFFFF;
+  padding: 10px 20px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .links {
     display: none;
@@ -66,7 +63,7 @@
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
   }
 
   .button {
@@ -83,7 +80,7 @@
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
   }
   
   .button:hover, .button:focus {

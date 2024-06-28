@@ -104,10 +104,10 @@ export function Navbar() {
         onClose={() => setModalOpened(false)}
         title="Contact Us"
         overlayProps={{
-          className: classes.modalOverlay, // Apply custom overlay class
+          className: classes.modalOverlay,
         }}
         classNames={{
-          content: classes.modalContent, // Apply custom modal content class
+          content: classes.modalContent,
         }}
       >
         <form>
