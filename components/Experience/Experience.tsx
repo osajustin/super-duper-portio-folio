@@ -1,4 +1,4 @@
-import { Container, Title, Button, Group, Text, List, Divider, UnstyledButton, Stack } from '@mantine/core';
+import { Container, Title, Button, Group, Text, List, Divider, UnstyledButton, Stack, Flex } from '@mantine/core';
 import classes from './Experience.module.css';
 import workHistory from './../../public/workHistory.json'
 import { useState } from 'react';
@@ -27,7 +27,10 @@ export function Experience() {
       <Text className={classes.sectionTitle}>EXPERIENCE</Text>
 
       {/* Button group of companies */}
-      <Group justify="space-between" gap="xl" grow>
+      <Flex 
+        direction={{ base: 'column', sm: 'row' }}
+        gap={{ base: 'sm', sm: 'lg' }}
+        justify={{ base: 'space-between', sm: 'center' }}>
         {uniqueCompanies.map((company, index) => (
           <UnstyledButton
             className={classes.button}
@@ -38,7 +41,7 @@ export function Experience() {
             {company}
           </UnstyledButton>
         ))}
-      </Group>
+      </Flex>
 
       {/* Experiences of jobs */}
       <Container className={classes.experience}>
