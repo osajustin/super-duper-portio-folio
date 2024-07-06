@@ -9,7 +9,8 @@
 
 .buttonGroup {
   display: flex;
-  justify-content: space-between;
+  justify-items: flex-end;
+  gap: 10px;
 }
 
 .button {
@@ -43,4 +44,23 @@
 
 .button:hover svg, .button:focus svg {
   fill: #FFFFFF;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contactSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
 }
