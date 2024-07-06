@@ -1,20 +1,24 @@
 import React, { Key, useState } from 'react';
-import { Text, Group, Burger, Modal, TextInput, Textarea, Button, useMantineColorScheme, UnstyledButton } from '@mantine/core';
+import { Group, Burger, Modal, TextInput, Textarea, Button, useMantineColorScheme, UnstyledButton, ActionIcon, Drawer, useComputedColorScheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSunFilled } from '@tabler/icons-react';
 import classes from './Navbar.module.css';
+import cx from 'clsx';
 
 const links = [
   { link: '#projects', label: 'Projects' },
   { link: '#experience', label: 'Resume' },
   { link: '#contact', label: 'Contact' },
-  // { link: '/', label: <IconSunFilled /> },
+ //{ link: null, label: <IconSunFilled /> },
 ];
 
 export function Navbar() {
   const [opened, { toggle }] = useDisclosure(false);
+  const [drawerOpened, setDrawerOpened] = useState(false);
   const [modalOpened, setModalOpened] = useState(false);
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+
+  const { setColorScheme } = useMantineColorScheme();
+  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
   const handleScroll = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, link: string, offset = 0) => {
     event.preventDefault();
@@ -42,27 +46,26 @@ export function Navbar() {
           onClick={(event) => {
             event.preventDefault();
             setModalOpened(true);
+            setDrawerOpened(false);
           }}
         >
           {link.label}
         </UnstyledButton>
       );
     }
-    else if (link.label === <IconSunFilled />) {
-      return (
-        <a
-          key="iconSunFilled"
-          href="#"
-          className={classes.button}
-          onClick={(event) => {
-            event.preventDefault();
-            toggleColorScheme();
-          }}
-        >
-          <IconSunFilled />
-        </a>
-      );
-    } else {
+    // else if (link.label === <IconSunFilled />) {
+    //   return (
+    //     <ActionIcon
+    //       onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
+    //       variant="default"
+    //       size="xl"
+    //       aria-label="Toggle color scheme"
+    //     >
+    //       <IconSunFilled className={cx(classes.icon, classes.light)} stroke={1.5} />
+    //     </ActionIcon>
+    //   );
+    // } 
+    else {
       return (
         <a
           key={link.label as Key}
@@ -74,6 +77,7 @@ export function Navbar() {
             } else {
               handleScroll(event, link.link, -100);
             }
+            setDrawerOpened(false);
           }}
         >
           {link.label}
@@ -87,7 +91,7 @@ export function Navbar() {
       <header className={classes.header}>
         <div className={classes.inner}>
           <Group>
-            <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+            <Burger opened={opened} onClick={() => setDrawerOpened(true)} size="sm" hiddenFrom="sm" />
             <a href="#" className={classes.joLogo} onClick={scrollToTop}>JO.</a>
           </Group>
 
@@ -98,6 +102,16 @@ export function Navbar() {
           </Group>
         </div>
       </header>
+
+      <Drawer
+        opened={drawerOpened}
+        onClose={() => setDrawerOpened(false)}
+        title="Menu"
+        padding="md"
+        size="sm"
+      >
+        {items}
+      </Drawer>
 
       <Modal
         opened={modalOpened}
