@@ -4,6 +4,7 @@ import { Hero } from '@/components/Hero/Hero';
 import { Navbar } from '@/components/Navbar/navbar';
 import { Footer } from '@/components/Footer/Footer'
 import { Container } from '@mantine/core';
+import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
 
 export default function HomePage() {
   return (
