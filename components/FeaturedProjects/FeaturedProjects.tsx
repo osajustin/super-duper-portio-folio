@@ -1,4 +1,4 @@
-import { Container, Grid, Card, Image, Text, Group, GridCol, Divider, SimpleGrid } from '@mantine/core';
+import { Container, Card, Image, Text, Group, Divider, SimpleGrid } from '@mantine/core';
 import projects from './../../public/projects.json';
 import { FaGithub, FaLink } from 'react-icons/fa';
 import classes from './FeaturedProjects.module.css';
@@ -13,14 +13,16 @@ const FeaturedProjects = () => {
         cols={{ base: 1, sm: 2 }}
         spacing={{ base: 10, sm: 'xl' }}
         verticalSpacing={{ base: 'md', sm: 'xl' }}>
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div>
             <Card radius="md" style={{ width: '100%', maxWidth: '540px', zIndex: -1, position: 'relative'}}>
               
+              {/* Card Image */}
               <Card.Section>
                 <Image className={classes.image} src={project.image} alt={project.title} height={160} />
               </Card.Section>
 
+              {/* Card Description */}
               <Card.Section>
                 <Group justify="space-between" align="stretch">
                     <Text className={classes.projectTitle}>{project.title}</Text>
@@ -37,10 +39,7 @@ const FeaturedProjects = () => {
                   {project.tags.join(' - ')}
                 </Text>
               </Card.Section>
-             
-                
-                
-              
+
             </Card>
           </div>
         ))}
