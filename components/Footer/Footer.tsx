@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Group, Text, Button, Flex } from '@mantine/core';
-import { FaEnvelope, FaFile, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaFileDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
 import classes from './Footer.module.css';
 
 export function Footer() {
@@ -37,7 +37,7 @@ export function Footer() {
             component="a"
             href="/public/OsagieJustin_CV.pdf"
             download
-            leftSection={<FaFile />}
+            leftSection={<FaFileDownload />}
             mt="md"
           >
             Resume
