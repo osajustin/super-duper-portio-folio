@@ -1,8 +1,10 @@
 # 💼 Justin Osagie - Portfolio
 
-<!--![Welcome Image](https://via.placeholder.com/800x200.png?text=Welcome+to+My+Portfolio)-->
-
 Hello! I'm Justin Osagie, a passionate software engineer with a strong background in fullstack development. Welcome to my portfolio where you can explore my projects, skills, and learn a bit more about me.
+
+## UI Inspiration
+- Inspired/Designed by [Melody Onyeocha](https://www.figma.com/@melocoder)
+- [Design can be found here](https://www.figma.com/community/file/1060298479321271618)
 
 ## 🧑‍💻 About Me
 
