@@ -2,7 +2,7 @@ import React, { Key, useState } from 'react';
 import { Group, Burger, Modal, TextInput, Textarea, Button, useMantineColorScheme, UnstyledButton, ActionIcon, Drawer, useComputedColorScheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSunFilled } from '@tabler/icons-react';
-import classes from './Navbar.module.css';
+import classes from './navbar.module.css';
 import cx from 'clsx';
 
 const links = [
