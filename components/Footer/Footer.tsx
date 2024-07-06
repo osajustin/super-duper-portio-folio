@@ -1,54 +1,59 @@
+import React from 'react';
 import { Container, Group, Text, Button, Flex } from '@mantine/core';
+import { FaEnvelope, FaFileDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
 import classes from './Footer.module.css';
-import { FaEnvelope, FaExternalLinkAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export function Footer() {
-
   return (
-        <Container style={{ padding: '20px 0', borderTop: '1px solid #333' }}>
-          <Flex justify="space-between" align="center">
-            <Text size="sm">
-              Contact
-            </Text>
-            <Group>
-              <Button
-                component="a"
-                href="mailto:your-email@example.com"
-                leftSection={<FaEnvelope />}
-                variant="outline"
-                color="black"
-              >
-                Send an email
-              </Button>
-              <Button
-                component="a"
-                href="https://www.linkedin.com/in/your-profile"
-                leftSection={<FaLinkedin />}
-                variant="outline"
-                color="black"
-              >
-                LinkedIn
-              </Button>
-              <Button
-                component="a"
-                href="https://www.upwork.com/freelancers/~your-profile"
-                leftSection={<FaExternalLinkAlt />}
-                variant="outline"
-                color='black'
-              >
-                Upwork
-              </Button>
-              <Button
-                component="a"
-                href="https://github.com/your-profile"
-                leftSection={<FaGithub />}
-                variant="outline"
-                color="black"
-              >
-                Github
-              </Button>
-            </Group>
-          </Flex>
-        </Container>
+    <Container size='md' className={classes.footerContainer}>
+      <Flex justify="space-between" align="center" className={classes.contactSection}>
+        <Text className={classes.sectionTitle}>
+          CONTACT
+        </Text>
+        <Group className={classes.buttonGroup}>
+          <Button
+            justify="center"
+            className={classes.button}
+            component="a"
+            href="https://github.com/osajustin"
+            leftSection={<FaGithub />}
+            mt="md"
+          >
+            Github
+          </Button>
+          <Button
+            justify="center"
+            className={classes.button}
+            component="a"
+            href="https://www.linkedin.com/in/justinosagie"
+            leftSection={<FaLinkedin />}
+            mt="md"
+          >
+            LinkedIn
+          </Button>
+          <Button
+            justify="center"
+            className={classes.button}
+            component="a"
+            href="/public/OsagieJustin_CV.pdf"
+            download
+            leftSection={<FaFileDownload />}
+            mt="md"
+          >
+            Resume
+          </Button>
+          <Button
+            justify="center"
+            className={classes.button}
+            component="a"
+            href="mailto:osajustin@gmail.com"
+            leftSection={<FaEnvelope />}
+            mt="md"
+          >
+            Send an Email
+          </Button>
+        </Group>
+      </Flex>
+    </Container>
   );
 }

@@ -1,8 +1,6 @@
-/* components/WorkExperience.module.css */
 .experience {
-  background-color: #000;
-  color: #fff;
   padding: 20px;
+  font-size: rem(16px);
 }
 
 .job {
@@ -10,18 +8,24 @@
 }
 
 .role {
-  font-size: 1.5em;
-  margin-bottom: 5px;
+  font-size: rem(24px);
+  font-weight: 400;
+  line-height: rem(24px);
+  color: #1A1A1A;
 }
 
 .company {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: rem(24px);
+  color: #004E93;
 }
 
 .date {
-  font-size: 1em;
-  margin-bottom: 10px;
+  font-size: rem(16px);
+  font-weight: 400;
+  line-height: rem(24px);
+  color: #1A1A1A; 
 }
 
 .points {
@@ -31,4 +35,65 @@
 
 .points li {
   margin-bottom: 5px;
+}
+
+.sectionTitle {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+  font-size: rem(18px);
+  line-height: auto;
+  font-weight: 300;
+  margin-bottom: 1.625rem;
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: rem(28px);
+  }
+}
+
+.button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: rem(18px);
+  line-height: rem(24px);
+  color: #1F1E1E;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: rem(4px);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover, .button:focus {
+  background-color: #1F1E1E;
+  color: #FFFFFF;
+}
+
+.button:active {
+  background-color: #1F1E1E;
+  color: #FFFFFF;
+}
+
+.list {
+  padding-left: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  font-size: rem(16px);
+  font-weight: 400;
+  line-height: rem(24px);
+  color: #1A1A1A; 
+}
+
+.icon {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }

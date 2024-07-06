@@ -1,27 +1,39 @@
 [
   {
-    "title": "Project Name",
-    "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat.",
-    "image": "image1.jpg",
+    "title": "IntenseProxy",
+    "description": "Proxy provider website including authentication, dashboard and dynamic features",
+    "image": "./temporaryProjectImages/image1.png",
     "tags": ["React", "Bootstrap", "Styled Components"]
   },
   {
-    "title": "Project Name",
-    "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat.",
-    "image": "image2.jpg",
-    "tags": ["React", "Bootstrap", "Styled Components"]
+    "title": "$AAPE Coin",
+    "description": "Site for a BSC based coin called $AAPE",
+    "image": "./temporaryProjectImages/image2.png",
+    "tags": ["Vue", "Nuxt", "Netlify"]
   },
   {
-    "title": "Project Name",
-    "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat.",
-    "image": "image1.jpg",
-    "tags": ["React", "Bootstrap", "Styled Components"]
+    "title": "Blockchain Explorer",
+    "description": "Sidechain explorer open source project (block explorer) for transactions.",
+    "image": "./temporaryProjectImages/image3.png",
+    "tags": ["React", "TailwindCSS", "Context API"]
   },
   {
-    "title": "Project Name",
-    "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat.",
-    "image": "image2.jpg",
-    "tags": ["React", "Bootstrap", "Styled Components"]
+    "title": "GitProfile",
+    "description": "A nicer look to Github profiles using features such as user search, authentication using Firebase and charts using the GitHub API.",
+    "image": "./temporaryProjectImages/image4.png",
+    "tags": ["React", "Redux", "Firebase", "Github API"]
+  },
+  {
+    "title": "MovieDB",
+    "description": "TV application, displays different categories of movies/shows (popular, in theaters, trending etc) alongside a search option using TheMovieDB API for the data",
+    "image": "./temporaryProjectImages/image5.png",
+    "tags": ["React.js", "Redux", "TheMovieDB API"]
+  },
+  {
+    "title": "Soundify",
+    "description": "Music search application, displays informations about artists such as albums, biography, songs that are available on youtube and much more using TheAudioDB API",
+    "image": "./temporaryProjectImages/image4.png",
+    "tags": ["Vue.js", "Vuex", "TheAudioDB API"]
   }
 ]
   

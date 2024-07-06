@@ -1,46 +1,49 @@
-// components/FeaturedProjects.js
-import { Container, Grid, Card, Image, Text, Group, Badge, GridCol, Divider } from '@mantine/core';
+import { Container, Card, Image, Text, Group, Divider, SimpleGrid } from '@mantine/core';
 import projects from './../../public/projects.json';
-import { FaGithub, FaLink } from 'react-icons/fa';
+import { IconLink, IconBrandGithubFilled  } from '@tabler/icons-react';
+import classes from './FeaturedProjects.module.css';
 
 const FeaturedProjects = () => {
   return (
-    <Container>
-      <Text size="xl" style={{ marginBottom: '20px' }}>
-        Featured Projects
+    <Container className={classes.featuredProjects}>
+      <Text className={classes.sectionTitle}>
+        FEATURED PROJECTS
       </Text>
-      <Grid justify="space-between">
-        {projects.map((project, index) => (
-          <GridCol key={index} span={6} style={{ display: 'flex', justifyContent: 'center' }}>
-            <Card shadow="sm" padding="lg" radius="md" style={{ width: '100%', maxWidth: '540px' }}>
+      <SimpleGrid
+        cols={{ base: 1, sm: 2 }}
+        spacing={{ base: 10, sm: 'xl' }}
+        verticalSpacing={{ base: 'md', sm: 'xl' }}>
+        {projects.map((project) => (
+          <div>
+            <Card radius="md" style={{ width: '100%', maxWidth: '540px', zIndex: -1, position: 'relative', gap: '12px'}}>
+              
+              {/* Card Image */}
               <Card.Section>
-                <Image src={project.image} alt={project.title} height={160} />
+                <Image className={classes.image} src={project.image} alt={project.title} height={160} />
               </Card.Section>
-                <Grid>
-                    <GridCol span={6}>
-                        <Text>{project.title}</Text>
-                    </GridCol>
-                    <GridCol span={3} offset={3}>
-                        <FaGithub />
-                        <FaLink />
-                    </GridCol>
-                </Grid>
-                
-                
-              <Text size="sm" style={{ color: '#666' }}>
-                {project.description}
-              </Text>
-              <Group style={{ marginTop: 10 }}>
-                {project.tags.map((tag, idx) => (
-                  <Badge key={idx} color="blue" variant="light">
-                    {tag}
-                  </Badge>
-                ))}
-              </Group>
+
+              {/* Card Description */}
+              <Card.Section>
+                <Group justify="space-between" align="stretch">
+                    <Text className={classes.projectTitle}>{project.title}</Text>
+                  
+                  <Group>
+                      <IconBrandGithubFilled  />
+                      <IconLink />
+                  </Group>
+                </Group>
+                <Text className={classes.projectDescription}>
+                  {project.description}
+                </Text>
+                <Text className={classes.projectTags}>
+                  {project.tags.join(' - ')}
+                </Text>
+              </Card.Section>
+
             </Card>
-          </GridCol>
+          </div>
         ))}
-      </Grid>
+      </SimpleGrid>
       <Divider style={{ marginTop: '4rem', marginBottom: '4rem' }} />
     </Container>
   );

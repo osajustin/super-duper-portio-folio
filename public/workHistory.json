@@ -1,8 +1,8 @@
 [
     {
       "role": "Software Developer",
-      "company": "Citi",
-      "date": "March 2022 - Present",
+      "company": "Citibank",
+      "date": "Mar 2022 - Present",
       "points": [
         "Developed .NET 6 microservices using C# to create a robust token management system, featuring a polling service for timely token expiration alerts, RESTful APIs for efficient token management, and integrated data handling with Dapper and Microsoft SQL Server, enhancing system reliability and data integrity.",
         "Developed on 3 Angular applications, creating over 40 new UI features by writing scalable code, integrating advanced functionalities on top of AG-Grid, and breaking down applications into a micro-frontend approach.",
@@ -11,9 +11,9 @@
       ]
     },
     {
-      "role": "Software Developer Intern",
-      "company": "Citi (Intern)",
-      "date": "June 2021 - August 2021",
+      "role": "Software Developer (Intern)",
+      "company": "Citibank (Intern)",
+      "date": "Jun 2021 - Aug 2021",
       "points": [
         "Successfully integrated the open-source data discovery and metadata engine Amundsen into Citi’s environment by modifying the Flask UI to meet Citi standards and connecting it to Neo4j for populating data.",
         "Utilized Elasticsearch for advanced search capabilities, enabling efficient metadata retrieval and reducing time spent searching across various databases for key information.",
@@ -21,18 +21,18 @@
       ]
     },
     {
-      "role": "Software Developer Intern",
+      "role": "Software Developer (Intern)",
       "company": "Florida Power & Light",
-      "date": "June 2020 - August 2020",
+      "date": "Jun 2020 - Aug 2020",
       "points": [
         "Amplified customer service call capacity from 5,000/hr to over 1,000,000/hr by implementing a scalable serverless solution in Amazon Web Services (AWS) using Python and Java, enhancing disaster response capabilities during critical events.",
         "Developed a cloud-based system, transitioning from on-premise infrastructure to a scalable AWS solution, which resulted in vastly improved load management and system resilience during high-demand periods."
       ]
     },
     {
-      "role": "iOS Developer Intern",
+      "role": "iOS Developer (Intern)",
       "company": "NextEra Energy Resources",
-      "date": "May 2019 - August 2019",
+      "date": "May 2019 - Aug 2019",
       "points": [
         "Developed an iPad-based iOS inventory management application using Swift, enabling field workers to efficiently scan barcodes for part checkouts, directly resulting in $200k annual savings.",
         "Overhauled a legacy application by designing a new user interface and refactoring deprecated code, leveraging Swift and Objective-C, which significantly improved system reliability and user engagement.",
@@ -40,9 +40,9 @@
       ]
     },
     {
-      "role": "Data Analyst Intern",
+      "role": "Data Analyst (Intern)",
       "company": "USF",
-      "date": "August 2018 - December 2018",
+      "date": "Aug 2018 - Dec 2018",
       "points": [
         "Developed a Python data collection application utilizing BeautifulSoup for HTML parsing, resulting in an annual cost saving of $12k by automating manual data entry processes."
       ]
