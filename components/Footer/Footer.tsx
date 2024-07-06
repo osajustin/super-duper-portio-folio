@@ -1,22 +1,24 @@
-import { Container, Group, Text, Grid, GridCol, Button } from '@mantine/core';
+import { Container, Group, Text, Grid, GridCol, Button, Flex, SimpleGrid } from '@mantine/core';
 import { FaEnvelope, FaFile, FaGithub, FaLinkedin } from 'react-icons/fa';
 import classes from './Footer.module.css';
 
 export function Footer() {
   return (
         <Container size='md' className={classes.footerContainer}>
-          <Grid justify="space-between" align="center">
+          <SimpleGrid cols={{ base: 2, sm: 1}} spacing={"lg"}>
 
             {/* SectionTitle */}
-            <GridCol span={3}>
+            <div>
               <Text className={classes.sectionTitle}>
                 CONTACT
               </Text>
-            </GridCol>
+            </div>
 
             {/* Group of Buttons */}
-            <GridCol span={9}>
-              <Group justify='center' grow preventGrowOverflow={false}>
+            <Flex 
+              direction={{ base: 'column', sm: 'row' }}
+              gap={{ base: 'sm', sm: 'lg' }}
+              justify={{ base: 'space-between', sm: 'center' }}>
               <Button
                   justify="center"
                   className={classes.button}
@@ -60,10 +62,9 @@ export function Footer() {
                 >
                   Send an Email
                 </Button>
-              </Group>
-            </GridCol>
+              </Flex>
             
-          </Grid>
+          </SimpleGrid>
         </Container>
   );
 }
