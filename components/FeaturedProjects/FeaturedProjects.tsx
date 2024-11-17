@@ -1,10 +1,9 @@
 import { Container, Card, Image, Text, Group, Divider, SimpleGrid } from '@mantine/core';
-import projects from './../../public/projects.json';
-import { IconLink, IconBrandGithubFilled  } from '@tabler/icons-react';
+import { IconLink, IconBrandGithubFilled } from '@tabler/icons-react';
+import projects from '../../public/projects.json';
 import classes from './FeaturedProjects.module.css';
 
-const FeaturedProjects = () => {
-  return (
+const FeaturedProjects = () => (
     <Container className={classes.featuredProjects}>
       <Text className={classes.sectionTitle}>
         FEATURED PROJECTS
@@ -15,20 +14,25 @@ const FeaturedProjects = () => {
         verticalSpacing={{ base: 'md', sm: 'xl' }}>
         {projects.map((project) => (
           <div>
-            <Card radius="md" style={{ width: '100%', maxWidth: '540px', zIndex: -1, position: 'relative', gap: '12px'}}>
-              
+            <Card radius="md" style={{ width: '100%', maxWidth: '540px', zIndex: -1, position: 'relative', gap: '12px' }}>
+
               {/* Card Image */}
               <Card.Section>
-                <Image className={classes.image} src={project.image} alt={project.title} height={160} />
+                <Image
+                  className={classes.image}
+                  src={project.image}
+                  alt={project.title}
+                  height={160}
+                />
               </Card.Section>
 
               {/* Card Description */}
               <Card.Section>
                 <Group justify="space-between" align="stretch">
                     <Text className={classes.projectTitle}>{project.title}</Text>
-                  
+
                   <Group>
-                      <IconBrandGithubFilled  />
+                      <IconBrandGithubFilled />
                       <IconLink />
                   </Group>
                 </Group>
@@ -47,6 +51,5 @@ const FeaturedProjects = () => {
       <Divider style={{ marginTop: '4rem', marginBottom: '4rem' }} />
     </Container>
   );
-};
 
 export default FeaturedProjects;

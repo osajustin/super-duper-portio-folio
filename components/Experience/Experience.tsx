@@ -1,7 +1,8 @@
-import { Container, Title, Button, Group, Text, List, Divider, UnstyledButton, Stack, Flex } from '@mantine/core';
-import classes from './Experience.module.css';
-import workHistory from './../../public/workHistory.json'
+/* eslint-disable @typescript-eslint/no-shadow */
+import { Container, Title, Group, Text, List, Divider, UnstyledButton, Stack, Flex } from '@mantine/core';
 import { useState } from 'react';
+import classes from './Experience.module.css';
+import workHistory from '../../public/workHistory.json';
 
 const getUniqueCompanies = (workHistory: any[]) => {
   const companies = workHistory.map((job) => job.company);
@@ -9,8 +10,6 @@ const getUniqueCompanies = (workHistory: any[]) => {
 };
 
 export function Experience() {
-  
-  
   const uniqueCompanies = getUniqueCompanies(workHistory);
   const [selectedCompany, setSelectedCompany] = useState(uniqueCompanies[0]);
 
@@ -20,14 +19,13 @@ export function Experience() {
 
   const filteredWorkHistory = workHistory.filter((job) => job.company === selectedCompany);
 
-
   return (
     <Container size="md">
       {/* Section Title */}
       <Text className={classes.sectionTitle}>EXPERIENCE</Text>
 
       {/* Button group of companies */}
-      <Flex 
+      <Flex
         direction={{ base: 'column', sm: 'row' }}
         gap={{ base: 'sm', sm: 'lg' }}
         justify={{ base: 'space-between', sm: 'center' }}>
@@ -35,7 +33,6 @@ export function Experience() {
           <UnstyledButton
             className={classes.button}
             key={index}
-
             onClick={() => handleButtonClick(company)}
           >
             {company}
@@ -47,7 +44,7 @@ export function Experience() {
       <Container className={classes.experience}>
         {filteredWorkHistory.map((job, index) => (
           <Stack key={index}>
-            <Group justify='space-between'>
+            <Group justify="space-between">
               <Title className={classes.role}>{job.role}</Title>
               <Text className={classes.date}>{job.date}</Text>
             </Group>

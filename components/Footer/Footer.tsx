@@ -5,7 +5,7 @@ import classes from './Footer.module.css';
 
 export function Footer() {
   return (
-    <Container size='md' className={classes.footerContainer}>
+    <Container size="md" className={classes.footerContainer}>
       <Flex justify="space-between" align="center" className={classes.contactSection}>
         <Text className={classes.sectionTitle}>
           CONTACT
